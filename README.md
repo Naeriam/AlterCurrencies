@@ -3,12 +3,14 @@
 ## All currency information of all your characters in a glance.
 When hovering over the currency tab of a character, info about this currency in all your other characters will be also shown.
 
-![AlterCurrenciesExample1][AC1]
-
-![AlterCurrenciesExample2][AC2]
+You can download this addon from: https://www.curseforge.com/wow/addons/alter-currencies
 
 ## Considerations
 Take into account that you will have to log in all characters before you can see the data.
+
+![AlterCurrenciesExample1][AC1]
+
+![AlterCurrenciesExample2][AC2]
 
 [AC1]: /images/AlterCurrencies1.png
 [AC2]: /images/AlterCurrencies2.png
