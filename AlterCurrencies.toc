@@ -1,0 +1,8 @@
+## Interface: 80100
+## Title: Alter Currencies
+## Author: Velhari-LosErrantes EU
+## Version: 0.1
+## Notes: Tracks the amount of each currency on all your alters and displays them in tooltip
+## SavedVariables: AltC_DB
+
+AlterCurrencies.lua
