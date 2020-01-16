@@ -1,4 +1,4 @@
-## Interface: 80205
+## Interface: 80300
 ## Title: Alter Currencies
 ## Author: Velhari-LosErrantes EU
 ## Version: 0.1
