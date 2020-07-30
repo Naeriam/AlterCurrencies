@@ -50,7 +50,7 @@ function AltC.GetCurrencyAmounts()
             local currencyId = tonumber(string.match(GetCurrencyListLink(i),"currency:(%d+)")) -- Get only the ID
             local currencyName, currencyAmount, isDiscovered = GetCurrencyInfo(currencyLink); 
 
-            if currencyId ~= nil and currencyName ~= nil and isDiscovered and currencyAmount > 0 then
+            if currencyId ~= nil and currencyName ~= nil and isDiscovered and currencyAmount >= 0 then
                 AltC.UpdateTable(currencyId, currencyAmount) -- Store
             end
         end
