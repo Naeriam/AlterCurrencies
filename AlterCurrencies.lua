@@ -48,8 +48,8 @@ function AltC.GetCurrencyAmounts()
         if currencyLink ~= nil then -- Ignore headers
 
             local currencyId = tonumber(string.match(C_CurrencyInfo.GetCurrencyListLink(i),"currency:(%d+)")) -- Get only the ID
-            local currencyStruct = C_CurrencyInfo.GetCurrencyInfo(currencyLink); 
-            
+            local currencyStruct = C_CurrencyInfo.GetCurrencyInfoFromLink(currencyLink); 
+
             currencyName = currencyStruct.name;
             currencyAmount = currencyStruct.quantity;
             isDiscovered = currencyStruct.discovered;
