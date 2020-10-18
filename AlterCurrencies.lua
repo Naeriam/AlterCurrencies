@@ -41,14 +41,18 @@ function AltC.GetCurrencyAmounts()
 
     local currencyName, currencyAmount, isDiscovered = nil,nil,nil;
     
-    for i = 1,GetCurrencyListSize(),1 do
+    for i = 1,C_CurrencyInfo.GetCurrencyListSize(),1 do
 
-        local currencyLink = GetCurrencyListLink(i);
+        local currencyLink = C_CurrencyInfo.GetCurrencyListLink(i);
 
         if currencyLink ~= nil then -- Ignore headers
 
-            local currencyId = tonumber(string.match(GetCurrencyListLink(i),"currency:(%d+)")) -- Get only the ID
-            local currencyName, currencyAmount, isDiscovered = GetCurrencyInfo(currencyLink); 
+            local currencyId = tonumber(string.match(C_CurrencyInfo.GetCurrencyListLink(i),"currency:(%d+)")) -- Get only the ID
+            local currencyStruct = C_CurrencyInfo.GetCurrencyInfo(currencyLink); 
+            
+            currencyName = currencyStruct.name;
+            currencyAmount = currencyStruct.quantity;
+            isDiscovered = currencyStruct.discovered;
 
             if currencyId ~= nil and currencyName ~= nil and isDiscovered and currencyAmount >= 0 then
                 AltC.UpdateTable(currencyId, currencyAmount) -- Store
@@ -104,7 +108,7 @@ end
 ---------------------------------------------------
 function AltC.AddToTooltip(tooltip, index)
 
-    local id = tonumber(string.match(GetCurrencyListLink(index),"currency:(%d+)"))
+    local id = tonumber(string.match(C_CurrencyInfo.GetCurrencyListLink(index),"currency:(%d+)"))
 
     if type(AltC_DB) == "table" and AltC_DB ~= nil then -- If shared variable have data
         for currencyId, value_DB in pairs(AltC_DB) do -- For each stored currency
