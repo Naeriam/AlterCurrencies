@@ -1,4 +1,4 @@
-DEFAULT_CHAT_FRAME:AddMessage('[AlterCurrencies] Hover on currency tab showing currency amounts in alters.', 1,1,0)
+DEFAULT_CHAT_FRAME:AddMessage('[AlterCurrencies] Showing currency amounts of any character when hovering over any currency on currency tab or any currency cost in items in merchant tabs.', 1,1,0)
 AlterCurrencies = {}
 AltC_DB = AltC_DB or {} -- Shared Variable
 
@@ -106,10 +106,7 @@ end
 ---------------------------------------------------
 -- Append to tooltip text all currency information
 ---------------------------------------------------
-function AltC.AddToTooltip(tooltip, index)
-
-    local id = tonumber(string.match(C_CurrencyInfo.GetCurrencyListLink(index),"currency:(%d+)"))
-
+function AltC.AddToTooltip(tooltip, id)
     if type(AltC_DB) == "table" and AltC_DB ~= nil then -- If shared variable have data
         for currencyId, value_DB in pairs(AltC_DB) do -- For each stored currency
             if id == currencyId then -- If the hover is on this currency 
@@ -139,42 +136,14 @@ function AltC.AddToTooltip(tooltip, index)
 end
 
 -- Add amounts below Blizzard tooltip
-hooksecurefunc(GameTooltip, "SetCurrencyToken", AltC.AddToTooltip)
+hooksecurefunc(GameTooltip, "SetCurrencyToken", function(tooltip, index)
+			local id = tonumber(string.match(C_CurrencyInfo.GetCurrencyListLink(index),"currency:(%d+)"))
+			AltC.AddToTooltip(tooltip, id)
+		end)
+hooksecurefunc(GameTooltip, "SetMerchantCostItem", function(tooltip, item, currency)
+			local itemTexture, itemValue, itemLink, currencyName = GetMerchantItemCostItem(item, currency)
+			local id = tonumber(string.match(itemLink,"currency:(%d+)"))
+			AltC.AddToTooltip(tooltip, id)
+		end)
 
 AlterCurrencies_Frame:SetScript("OnEvent", AltC.OnEvent)
-
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
