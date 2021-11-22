@@ -1,4 +1,4 @@
-## Interface: 90002
+## Interface: 90105
 ## Title: Alter Currencies
 ## Author: Velhari-LosErrantes EU
 ## Version: 0.1
