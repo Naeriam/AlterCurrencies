@@ -1,5 +1,5 @@
-## Interface: 90105
-## Title: Alter Currencies
+## Interface: 100000
+## Title: Alter |cFF8B008BCurrencies|r
 ## Author: Velhari-LosErrantes EU
 ## Version: 0.1
 ## Notes: Tracks the amount of each currency on all your alters and displays them in tooltip
