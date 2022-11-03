@@ -8,6 +8,9 @@ You can download this addon from: https://www.curseforge.com/wow/addons/alter-cu
 ## Considerations
 Take into account that you will have to log in all characters before you can see the data.
 
+### CLASSIC Version
+https://github.com/Naeriam/AlterCurrenciesClassic/
+
 ![AlterCurrenciesExample1][AC1]
 
 ![AlterCurrenciesExample2][AC2]
