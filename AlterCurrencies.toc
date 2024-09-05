@@ -1,7 +1,8 @@
-## Interface: 100000
+## Interface: 110002
 ## Title: Alter |cFF8B008BCurrencies|r
 ## Author: Velhari-LosErrantes EU
 ## Version: 0.1
+## IconTexture: Interface\Icons\inv_misc_curiouscoin
 ## Notes: Tracks the amount of each currency on all your alters and displays them in tooltip
 ## SavedVariables: AltC_DB
 

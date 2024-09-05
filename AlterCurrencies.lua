@@ -1,4 +1,4 @@
-DEFAULT_CHAT_FRAME:AddMessage('[AlterCurrencies] Showing currency amounts of any character when hovering over any currency on currency tab or any currency cost in items in merchant tabs.', 1,1,0)
+-- DEFAULT_CHAT_FRAME:AddMessage('[AlterCurrencies] Showing currency amounts of any character when hovering over any currency on currency tab or any currency cost in items in merchant tabs.', 1,1,0)
 AlterCurrencies = {}
 AltC_DB = AltC_DB or {} -- Shared Variable
 
