@@ -1,5 +1,5 @@
 ## Category: Utils by Naeriam
-## Interface: 110207
+## Interface: 120000
 ## Title: Alter |cFF8B008BCurrencies|r
 ## Author: Velhari-LosErrantes EU
 ## Version: 0.1
