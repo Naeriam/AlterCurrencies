@@ -1,5 +1,6 @@
 ## Category: Utils by Naeriam
 ## Interface: 120100
+## X-Curse-Project-ID: 341879
 ## Title: Alter |cFF8B008BCurrencies|r
 ## Author: Velhari-LosErrantes EU
 ## Version: 0.1
